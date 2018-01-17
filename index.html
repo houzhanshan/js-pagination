@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="pagination.js"></script>
 
  <style type="text/css">
     #idData {color: red;border: solid;text-align: center;}
@@ -10,9 +10,54 @@
 </head>
 <body onLoad="goPage(1,10);">
 <table id="idData" width="70%">
+
 </table>
     <table width="60%" align="right">
         <tr><td><div id="barcon" name="barcon"></div></td></tr>
     </table>
+<script>
+    var inerH ="<tr><td>liujinzhong1</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong2</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong3</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong4</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong5</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong6</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong7</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong8</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong9</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong10</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong11</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong12</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong13</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong14</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong15</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong16</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong17</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong18</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong19</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong20</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong21</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong22</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong23</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong24</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong25</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong26</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong27</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong28</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong29</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong30</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong31</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong32</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong33</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong34</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong35</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong36</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong37</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong38</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong39</td><td>25</td><td>男</td><td>山西吕梁</td></tr>\n" +
+        "    <tr><td>liujinzhong40</td><td>25</td><td>男</td><td>山西吕梁</td></tr>";
+    var itable = document.getElementById("idData");
+    itable.innerHTML=inerH;
+</script>
 </body> 
 </html>
